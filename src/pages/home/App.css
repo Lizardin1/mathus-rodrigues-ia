@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  color: white;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.container {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url("../../assets//background.jpg");
+}
+.background {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+}
+
+.section,
+.section1,
+.section2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & h1 {
+    font-size: 70px;
+    font-family: "Quicksand", serif;
+  }
+}
+
+.saiba-mais{
+  height: 70px;
+  width: 400px;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  & span {
+    font-size: 40px;
+  }
+}
+
+
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.text-section1,
+.text-section2 {
+  height: 100%;
+  width: 40%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  z-index: 2;
+
+  & p {
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+
+    & span {
+      background-color: gold;
+      color: black;
+      padding: 2px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.title-section1 span,
+.title-section2 span {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.img-section1,
+.img-section2 {
+  height: 100%;
+  width: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.img-section1 {
+  background-image: url("../../assets/banner-removebg-preview.png");
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  padding: 20px;
+}
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  & label {
+    font-size: 20px;
+  }
+}
+
+.input {
+  height: 50px;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid white;
+  padding-left: 1rem;
+  font-size: 20px;
+}
+
+.button-form {
+  height: 50px;
+  border-radius: 30px;
+  background-color: gold;
+  border: none;
+  & span {
+    color: black;
+    font-size: 30px;
+  }
+  cursor: pointer;
+}
+
+.button-form:hover {
+  background-color: #12c520;
+}
+.section2 {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.img-section2 {
+  height: 90%;
+  width: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  background-image: url("../../assets/ia-robo.png");
+}
+
+.text-section2 {
+  border: 2px solid white;
+  border-radius: 20px;
+
+  & h2 {
+    border-bottom: 1px solid #a1a1a1;
+  }
+
+  & p {
+    padding: 10px 0px;
+  }
+}
+
+.footer {
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-footer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.title-footer div h2 a:hover {
+  color: gold;
+}
