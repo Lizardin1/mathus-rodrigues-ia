@@ -19,9 +19,12 @@ function App() {
                 <span>Focadas no seu negócio</span>
               </h1>
               <br />
-              <button className="saiba-mais">
-                <span>Saiba mais!</span>
-              </button>
+              <a href="https://wa.me/553298696380?text=Ol%C3%A1%20Matheus,%20tenho%20interesse%20em%20escalar%20meu%20neg%C3%B3cio%20com%20intelig%C3%AAncia%20artificial"
+              target="_blank">
+                <button className="saiba-mais">
+                  <span>Saiba mais!</span>
+                </button>
+              </a>
             </div>
           </section>
           <section className="section1">
@@ -78,26 +81,13 @@ function App() {
             <div className="img-section2" />
             <div className="text-section2">
               <h1 className="title-section2">
-                Olá, me chamo Matheus Rodrigues
-                <br />
-                E quero te ajudar
-                <br />
-                <span>A aumentar até 10x sua conversão</span>
+                INTELIGÊNCIA ARTIFICIAL <br />
+                <span>A expansão de negócios</span>
               </h1>
               <br />
-              <h2>O que você irá aprender:</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                deleniti iste asperiores ab iure.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore voluptatum corrupti.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-                deleniti, beatae.
-              </p>
+              <p className="p-1">As chaves para sair da estagnação e transformar seu negócio em líder de mercado!</p>
+              <br />
+              <p className="p-2">Não basta conseguir vendas, é preciso saber crescer, descbubra o poder  que uma visão ambiciosa pode ter no seu negócio</p>
             </div>
           </section>
           <div className="footer">
