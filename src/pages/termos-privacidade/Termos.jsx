@@ -1,11 +1,18 @@
 import Header from "../components/Header";
 import "./Termos.css";
+import { BiArrowBack } from "react-icons/bi";
+import { Link } from "react-router-dom";
 export default function Termos() {
   return (
     <>
       <div className="container">
         <div className="background">
           <Header />
+          <Link to="/">
+            <div className="return">
+              <BiArrowBack className="icon-back" />
+            </div>
+          </Link>
           <div className="section-termos">
             <div className="section-termos-content">
               <h1>POLÍTICA DE PRIVACIDADE - Matheus</h1>
