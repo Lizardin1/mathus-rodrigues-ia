@@ -1,11 +1,62 @@
 import "./App.css";
 import Header from "../components/Header";
+import { useState } from "react";
+import axios from "axios";
+import { LiaCloudMoonSolid } from "react-icons/lia";
+
 function App() {
-  window.addEventListener("scroll", function () {
-    let header = this.document.querySelector("#header");
-    header.classList.toggle("header-background", this.window.scrollY > 5);
+  const api = axios.create({
+    baseURL: 'https://webhookstinyerp.azurewebsites.net/sendMessage'
   });
 
+  const url = "https://discord.com/api/webhooks/1344373354517368842/Lv2_nXBAWt_bThBDdKnMwSm79U7Z1WdowDfp8S6pDUxjLCr_Y8q3WLwRkFD-k1UD0AcJ"
+  const [nome, setNome] = useState();
+  const [email, setEmail] = useState();
+  const [telefone, setTelefone] = useState();
+
+  async function sendMessage() {
+    const listField = [
+      {
+        name: "Nome:",
+        value: nome,
+        inline: false,
+      },
+      {
+        name: "Email:",
+        value: email,
+        inline: false,
+      },
+      {
+        name: "Telefone:",
+        value: telefone,
+        inline: false,
+      },
+    ];
+
+    const message = JSON.stringify({
+      embeds: [
+        {
+          title:
+            "UM NOVO CLIENTE DESEJA UTILIZAR IA PARA IMPULSIONAR SEU NEGÓCIO!",
+          color: 2552550,
+          fields: listField,
+        },
+      ],
+    });
+    console.log("enviando msg")
+    const body = JSON.stringify({
+      url: url,
+      message: message
+    })
+    console.log(body)
+    await api.post("/", body, {
+      headers:{
+        "Content-Type": "application/json"
+      }
+    }).catch((err) => {
+      console.log(err)
+    });
+  }
   return (
     <>
       <div className="container">
@@ -19,8 +70,10 @@ function App() {
                 <span>Focadas no seu negócio</span>
               </h1>
               <br />
-              <a href="https://wa.me/553298696380?text=Ol%C3%A1%20Matheus,%20tenho%20interesse%20em%20escalar%20meu%20neg%C3%B3cio%20com%20intelig%C3%AAncia%20artificial"
-              target="_blank">
+              <a
+                href="https://wa.me/553298696380?text=Ol%C3%A1%20Matheus,%20tenho%20interesse%20em%20escalar%20meu%20neg%C3%B3cio%20com%20intelig%C3%AAncia%20artificial"
+                target="_blank"
+              >
                 <button className="saiba-mais">
                   <span>Saiba mais!</span>
                 </button>
@@ -45,13 +98,16 @@ function App() {
                 atendimento em uma vantagem competitiva para o seu negócio.
               </p>
 
-              <form action="" className="form">
+              <form className="form" action={sendMessage}>
                 <div className="form-inputs">
                   <label htmlFor="">Insira seu nome</label>
                   <input
                     className="input"
                     type="text"
                     placeholder="Ex: Quero usar IA Rodrigues"
+                    name="Nome"
+                    onChange={(e) => setNome(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-inputs">
@@ -60,17 +116,22 @@ function App() {
                     className="input"
                     type="text"
                     placeholder="Ex: querousarIA@gmail.com"
+                    name="e-Mail"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="form-inputs">
-                  <label htmlFor="">Insira seu whatsapp</label>
+                  <label htmlFor="">Insira seu telefone</label>
                   <input
                     className="input"
-                    type="text"
+                    type="tel"
                     placeholder="Ex: (11) 92267-2234"
+                    name="Telefone"
+                    onChange={(e) => setTelefone(e.target.value)}
                   />
                 </div>
-                <button className="button-form">
+                <button type="submit" className="button-form">
                   <span>Inscreva - se agora!</span>
                 </button>
               </form>
@@ -85,21 +146,27 @@ function App() {
                 <span>A expansão de negócios</span>
               </h1>
               <br />
-              <p className="p-1">As chaves para sair da estagnação e transformar seu negócio em líder de mercado!</p>
+              <p className="p-1">
+                As chaves para sair da estagnação e transformar seu negócio em
+                líder de mercado!
+              </p>
               <br />
-              <p className="p-2">Não basta conseguir vendas, é preciso saber crescer, descbubra o poder  que uma visão ambiciosa pode ter no seu negócio</p>
+              <p className="p-2">
+                Não basta conseguir vendas, é preciso saber crescer, descbubra o
+                poder que uma visão ambiciosa pode ter no seu negócio
+              </p>
             </div>
           </section>
           <div className="footer">
             <div className="title-footer">
               <div>
                 <h2>
-                  <a href="">Termos de uso</a>
+                  <a href="/termos-privacidade">Termos de uso</a>
                 </h2>
               </div>
               <div>
                 <h2>
-                  <a href="">Políticas de privacidade</a>
+                  <a href="/termos-privacidade">Políticas de privacidade</a>
                 </h2>
               </div>
             </div>

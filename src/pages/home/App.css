@@ -30,14 +30,30 @@ body {
   height: 90vh;
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
-.section{
+.section {
   width: 100%;
-  height: 75vh;
+  height: 85vh;
   display: flex;
+  position: sticky;
+  top: 0;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.5s;
+  animation: opacity-section forwards;
+  animation-timeline: view();
+  animation-range: cover 30% cover 45%;
+}
+
+@keyframes opacity-section {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .text-section {
   display: flex;
@@ -51,7 +67,7 @@ body {
   }
 }
 
-.saiba-mais{
+.saiba-mais {
   height: 70px;
   width: 400px;
   background-color: transparent;
@@ -64,7 +80,6 @@ body {
     font-size: 40px;
   }
 }
-
 
 .section1 {
   display: flex;
@@ -174,7 +189,7 @@ body {
 }
 
 .text-section2 {
-  height: 100%;
+  height: auto;
   width: 30%;
   padding: 50px;
   display: flex;
@@ -184,11 +199,11 @@ body {
   border: 2px solid white;
   border-radius: 20px;
 }
-.title-section2{
+.title-section2 {
   font-size: 42px;
-  color: #E5883A;
+  color: #e5883a;
 }
-.title-section2 span{
+.title-section2 span {
   font-size: 35px;
   border-bottom: 1px solid white;
 }
@@ -199,7 +214,7 @@ body {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #E5883A;
+  color: #e5883a;
 }
 .footer {
   height: auto;
@@ -224,36 +239,36 @@ body {
 
 @keyframes animate {
   0% {
-      border-color: white;
+    border-color: white;
   }
   10% {
-      border-color: red;
+    border-color: red;
   }
   20% {
-      border-color: orange;
+    border-color: orange;
   }
   30% {
-      border-color: yellow;
+    border-color: yellow;
   }
   40% {
-      border-color: green;
+    border-color: green;
   }
   50% {
-      border-color: blue;
+    border-color: blue;
   }
   60% {
-      border-color: indigo;
+    border-color: indigo;
   }
   70% {
-      border-color: violet;
+    border-color: violet;
   }
   80% {
-      border-color: purple;
+    border-color: purple;
   }
   90% {
-      border-color: pink;
+    border-color: pink;
   }
   100% {
-      border-color: white;
+    border-color: white;
   }
 }
