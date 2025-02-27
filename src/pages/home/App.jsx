@@ -80,6 +80,7 @@ function App() {
               </a>
             </div>
           </section>
+
           <section className="section1">
             <div className="text-section1">
               <h1 className="title-section1">
@@ -132,7 +133,7 @@ function App() {
                   />
                 </div>
                 <button type="submit" className="button-form">
-                  <span>Inscreva - se agora!</span>
+                  <span>Solicitar orçamento</span>
                 </button>
               </form>
             </div>
