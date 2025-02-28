@@ -177,6 +177,8 @@ function App() {
             </p>
           </div>
         </div>
+        <p>Essas IAs podem ser utilizadas em todas as etapas do relacionamento do cliente com sua empresa. Desde o primeiro contato para solicitar informações e marcar uma reunião, call ou consulta e realizar vendas, até atuar ativamente no suporte, tirando dúvidas e ajudando em tudo o que o usuário precisar.</p>
+        <p>Essas IAs são treinadas com seus dados e de sua empresa, transformando-as em perfeitos representantes do seu negócio e atendendo seus clientes 24 horas por dia e 7 dias por semana diretamente pelo WhatsApp. Essa solução é perfeita para empresas de todo tipo, porém são especialmente procuradas por nutricionistas, médicos, advogados, clínicas, ecommercers, dropshippers, infoprodutores e centenas de outras operações que lidam diretamente com os clientes.</p>
       </div>
     </>
   );
