@@ -278,7 +278,11 @@ export default function Termos() {
               </div>
             </div>
           </div>
-
+      <Link to="/">
+        <div className="return">
+          <BiArrowBack className="icon-back" />
+        </div>
+      </Link>
           <div className="footer">
             <div className="title-footer">
               <div>

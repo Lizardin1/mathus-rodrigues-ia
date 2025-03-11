@@ -46,7 +46,7 @@ body {
   transition: opacity 0.5s;
   animation: opacity-section forwards;
   animation-timeline: view();
-  animation-range: cover 30% cover 45%;
+  animation-range: cover 20% cover 30%;
 }
 
 @keyframes opacity-section {
@@ -121,7 +121,6 @@ body {
   padding: 5px;
 }
 
-
 .form {
   display: flex;
   flex-direction: column;
@@ -165,7 +164,7 @@ body {
 }
 
 .button-form:hover {
-  background-color: #6959CD;
+  background-color: #6959cd;
 }
 
 .section2 {
@@ -211,7 +210,7 @@ body {
 
 .title-section2 {
   font-size: 42px;
-  color: #6495ED;
+  color: #6495ed;
 }
 
 .title-section2 span {
@@ -227,7 +226,7 @@ body {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #6495ED	;
+  color: #6495ed;
 }
 
 .footer {
@@ -248,7 +247,7 @@ body {
 }
 
 .title-footer div h2 a:hover {
-  color: #6495ED	;
+  color: #6495ed;
 }
 
 @keyframes animate {
@@ -297,11 +296,129 @@ body {
   }
 }
 
+.section3 {
+  height: auto;
+  padding: 50px 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
+@keyframes section3animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
 
+.text-section3 {
+  translate: 500rem 0;
+  animation: section3animation 3s forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 30%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 90%;
+  width: 60%;
+  border-radius: 30px;
+  position: relative;
+  border: 1px solid #08e0ff;
+  padding: 20px;
+  text-align: center;
+  & p {
+    font-size: 28px;
+  }
+}
 
+.text-section3::after {
+  content: "";
+  background: #08e0ff;
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 8px;
+}
 
+@keyframes section4-animation-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes section4-animation-img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
 
+.section4 {
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.text-section4 {
+  translate: 500rem 0;
+  animation: section4-animation-text 3s forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 30%;
+  height: 100%;
+  width: 60%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-chat-bot {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #08e0ff;
+  height: 100%;
+  width: 60%;
+  border-radius: 20px;
+  font-size: 22px;
+  padding: 20px;
+}
+
+.text-chat-bot::after {
+  content: "";
+  background: #08e0ff;
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 8px;
+}
+
+.img-section4 {
+  translate: -500rem 0;
+  animation: section4-animation-img 3s forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 30%;
+  background-image: url("../../assets/chat-bot-certo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60%;
+  height: 900px;
+}
 
 @media (max-width: 468px) {
   .container {
@@ -309,7 +426,6 @@ body {
     background-position: center;
     background-attachment: inherit;
   }
-
 
   .text-section {
     width: 100%;
@@ -342,7 +458,7 @@ body {
 
   .text-section1 {
     height: 100%;
-    width: 100%;
+    width: 95%;
   }
 
   .section {
@@ -357,7 +473,7 @@ body {
     animation-timeline: none;
     animation-range: none;
   }
-  .section{
+  .section {
     margin-top: 100px;
   }
   .button-form span {
@@ -393,7 +509,7 @@ body {
     border-radius: 20px;
   }
 
-  .text-section2{
+  .text-section2 {
     height: auto;
     width: 100%;
     margin: 0 10px;
@@ -445,7 +561,7 @@ body {
   .footer .title-footer div h2 a {
     font-size: 15px;
   }
-  .footer{
+  .footer {
     text-align: center;
   }
   .footer p {
@@ -460,9 +576,78 @@ body {
     cursor: pointer;
     border: 3px solid white;
     animation: animate 3s infinite ease-in-out;
-  
+
     & span {
       font-size: 30px;
     }
+  }
+  .section3 {
+    height: auto;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .text-section3 {
+    height: 90%;
+    width: 95%;
+    text-align: center;
+    & p {
+      font-size: 20px;
+    }
+  }
+
+  @keyframes section4-animation-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  @keyframes section4-animation-img {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  .section4 {
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-section4 {
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-chat-bot {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #08e0ff;
+    height: 100%;
+    width: 95%;
+    border-radius: 20px;
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .img-section4 {
+    width: 400px;
+    height: 400px;
   }
 }
