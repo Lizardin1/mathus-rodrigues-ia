@@ -11,12 +11,12 @@ export default function Header() {
           </div>
         </a>
         <div className="item-central">
-          <Link style={{ textDecorationLine: "none" }} to="/termos-privacidade">
+          <Link style={{ textDecorationLine: "none" }} to="/termos">
             <p>Termos de uso</p>
           </Link>
         </div>
         <div className="item-central">
-          <Link style={{ textDecorationLine: "none" }} to="/termos-privacidade">
+          <Link style={{ textDecorationLine: "none" }} to="/politicas">
             <p>Politicas de privacidade</p>
           </Link>
         </div>
