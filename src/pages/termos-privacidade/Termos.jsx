@@ -78,6 +78,29 @@ export default function Termos() {
               </p>
             </div>
           </div>
+          <Link to="/">
+            <div className="return">
+              <BiArrowBack className="icon-back" />
+            </div>
+          </Link>
+          <div className="footer">
+            <div className="title-footer">
+              <div>
+                <h2>
+                  <a href="">Termos de uso</a>
+                </h2>
+              </div>
+              <div>
+                <h2>
+                  <a href="">Políticas de privacidade</a>
+                </h2>
+              </div>
+            </div>
+            <p>
+              ©2025 – Todos os direitos reservados | CNPJ: 52.878.843/0001-99 |
+              Matheus Rodrigues
+            </p>
+          </div>
         </div>
       </div>
     </>

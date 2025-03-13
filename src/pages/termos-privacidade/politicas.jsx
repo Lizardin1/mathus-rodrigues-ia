@@ -1,4 +1,3 @@
-import './politicas.css'
 import { Link } from 'react-router-dom'
 import { BiArrowBack } from 'react-icons/bi'
 import Header from '../components/Header'
